@@ -1,6 +1,8 @@
 # XPS-15-9500-Catalina-10.15.6
 A work in progress of getting OS X Catalina (10.15.6) to run on a Dell XPS 15 9500 using Opencore.
 
+![Image of About This Mac](https://i.imgur.com/amM5AHA.jpg)
+
 ## Introduction
 The EFI included in this repository was able to get Mac OS X Catalina 10.15.6 running on a Dell XPS 15 9500, albeit with many issues that will be reviewed in this guide. The specific laptop that this was tested on was the 3840x2400 touchscreen variant with a 1TB PC611 SK Hyinx NVME SSD. This EFI was mainly used to get into the Mac OS X installer and get it installed onto my hard drive, so I haven't done much post install work.
 
@@ -67,4 +69,4 @@ Haven't looked into these two very much yet. I am using the boot-arg aclid=30 wi
 
 I intend for this EFI to be a starting point for others to experiment getting Mac OS X running on their Dell XPS 15 9500s with full functionality. All of the discoveries I made to get to this point were a result of countless hours of reading along with trial and error. I am by no means an expert, and need lots of help to get this project off the ground and functional. Thanks for giving this a read, and good luck!
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
