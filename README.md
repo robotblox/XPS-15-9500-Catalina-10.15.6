@@ -52,10 +52,10 @@ Haven't looked into these two very much yet. I am using the boot-arg aclid=30 wi
 
 1. SATA Mode in BIOS must be set to `AHCI`. This **will cause a kernel panic** when booting into the Mac OS X USB installer.
 
-To fix this, you must use the `SSDT-DNVME.aml` file provided in this EFI and put it in your ACPI folder. This was sourced from geek5nan's XPS 7590 Hackintosh EFI, and disables any NVME SSD installed in your system when booting into Mac OS X.
+- To fix this, you must use the `SSDT-DNVME.aml` file provided in this EFI and put it in your ACPI folder. This was sourced from geek5nan's XPS 7590 Hackintosh EFI, and disables any NVME SSD installed in your system when booting into Mac OS X.
 
 2. `SetupVirtualMap` under Booter > Quirks must be set to **false**. If it is not, there **will be a kernel panic.**
 
 3. iGPU acceleration does not work using the base instructions provided in Dortania's Opencore guide. You will get stuck at **IOConsoleUsers: gIOScreenLockState 3** indefinitely unless you boot with `-igfxvesa` (however, this disables iGPU Acceleration). 
 
-I used the framebuffer patches found under `PciRoot(0x0)/Pci(0x2,0x0)`, and boot-args found under `NVRAM ` from geek5nan's XPS 7590 config.plist to enable iGPU Acceleration and it worked.
+- I used the framebuffer patches found under `PciRoot(0x0)/Pci(0x2,0x0)`, and boot-args found under `NVRAM ` from geek5nan's XPS 7590 config.plist to enable iGPU Acceleration and it worked.
