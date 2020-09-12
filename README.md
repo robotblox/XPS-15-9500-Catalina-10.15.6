@@ -44,7 +44,7 @@ It works nominally after booting into Mac OS X. Anywhere between 30 seconds - 5 
 
 I attempted to manually create an SSDT-GPIO as per the Opencore Dortania guide, but with that method the trackpad and touchscreen were never detected.
 
-See also: as reccomended by u/pwndupure on Reddit, [this edit](https://github.com/VoodooI2C/VoodooI2C/issues/319#issuecomment-646437623) to VoodooI2C & VoodooI2CHID may work to fix this issue.
+See also: as recommended by u/pwndupure on Reddit, [this edit](https://github.com/VoodooI2C/VoodooI2C/issues/319#issuecomment-646437623) to VoodooI2C & VoodooI2CHID may work to fix this issue.
 
 I have not been able to try this edit as I don't have access to a functional Mac with Xcode, and therefore I can't build the new kexts. If anyone gives this a shot and it works, please let me know.
 
