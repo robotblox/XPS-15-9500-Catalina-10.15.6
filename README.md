@@ -6,7 +6,7 @@ A work in progress of getting OS X Catalina (10.15.6) to run on a Dell XPS 15 95
 ## Introduction
 The EFI included in this repository was able to get Mac OS X Catalina 10.15.6 running on a Dell XPS 15 9500, albeit with many issues that will be reviewed in this guide. The specific laptop that this was tested on was the 3840x2400 touchscreen variant with a 1TB PC611 SK Hyinx NVME SSD. This EFI was mainly used to get into the Mac OS X installer and get it installed onto my hard drive, so I haven't done much post install work.
 
-If you would like to get started with creating a Hackintosh on your XPS 9500 but have no experience, I would highly reccomend following Dortania's fantastic Opencore Install guide: https://dortania.github.io/OpenCore-Install-Guide/ and then returning here for troubleshooting.
+If you would like to get started with creating a Hackintosh on your XPS 9500 but have no experience, I would highly reccomend following Dortania's fantastic [Opencore Install guide](https://dortania.github.io/OpenCore-Install-Guide/) and then returning here for troubleshooting.
 
 
 ## Specs
@@ -23,21 +23,28 @@ If you would like to get started with creating a Hackintosh on your XPS 9500 but
 | Wireless               | N/A (intend to use ASUS AC53 USB when USB ports work)        |
 
 
+Quick Note: My serial number, MLB, and UUID have been removed from the config.plist. Please use CorpNewt's [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to create your own
+
+
 ## What Works
 
 iGPU: Works normally
 
 Keyboard: Works normally using VoodooPS2
 
-Touchpad & Touchscreen: Sometimes (read below)
+Trackpad & Touchscreen: Sometimes (read below)
 
 
 ## What Doesn't Work
 
-### Touchpad & Touchscreen
-The touchpad operates with VoodooI2C + VoodooI2CHID and works nominally after booting into Mac OS X. Anywhere between 30 seconds - 5 minutes after booting into Mac OS however, the touchpad and touchscreen both become completely non-fuctional. If I move my fingers around on the touchpad vigorously, the cursor might move a little bit without animating it's movement, but overall it's unusable and requires a restart of the OS. The keyboard works fine during this time.
+### Trackpad & Touchscreen
+The trackpad & touchscreen operate with SSDT-XOSI and the necessary patches under ACPI + VoodooI2C + VoodooI2CHID.
 
-See also: as reccomended by u/pwndupure on Reddit, this edit to VoodooI2C & VoodooI2CHID may work to fix this issue - https://github.com/VoodooI2C/VoodooI2C/issues/319#issuecomment-646437623
+It works nominally after booting into Mac OS X. Anywhere between 30 seconds - 5 minutes after booting into Mac OS however, the trackpad and touchscreen both become completely non-fuctional. If I move my fingers around on the trackpad vigorously, the cursor might move a little bit without animating it's movement, but overall it's unusable and requires a restart of the OS. The keyboard works fine during this time.
+
+I attempted to manually create an SSDT-GPIO as per the Opencore Dortania guide, but with that method the trackpad and touchscreen were never detected.
+
+See also: as reccomended by u/pwndupure on Reddit, [this edit](https://github.com/VoodooI2C/VoodooI2C/issues/319#issuecomment-646437623) to VoodooI2C & VoodooI2CHID may work to fix this issue.
 
 I have not been able to try this edit as I don't have access to a functional Mac with Xcode, and therefore I can't build the new kexts. If anyone gives this a shot and it works, please let me know.
 
