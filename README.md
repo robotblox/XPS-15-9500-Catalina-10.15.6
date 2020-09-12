@@ -66,3 +66,5 @@ Haven't looked into these two very much yet. I am using the boot-arg aclid=30 wi
 ## Conclusion
 
 I intend for this EFI to be a starting point for others to experiment getting Mac OS X running on their Dell XPS 15 9500s with full functionality. All of the discoveries I made to get to this point were a result of countless hours of reading along with trial and error. I am by no means an expert, and need lots of help to get this project off the ground and functional. Thanks for giving this a read, and good luck!
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
