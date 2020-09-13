@@ -15,10 +15,10 @@ If you would like to get started with creating a Hackintosh on your XPS 9500 but
 | ---------------------- | ------------------------------------------------------------ |
 | CPU                    | Intel Core i7 10750H                                         |
 | GPU                    | Intel UHD Graphics 630                                       |
-| Builtin Screen         | 15.6" UHD+ IPS Touch Display                                 |
+| Screen                 | 15.6" UHD+ IPS Touch Display                                 |
 | RAM                    | 32GB DDR4 2933MHz (2x16GB)                                   |
 | Internal SSD - Windows | SK Hyinx PC611 1TB NVME SSD                                  |
-| External SSD - macOS   | WD Blue™ 3D NAND SATA M.2 2280 SSD 500GB                     |
+| Internal SSD - macOS   | WD Blue™ 3D NAND SATA M.2 2280 SSD 500GB                     |
 | Audio                  | Unknown                                                      |
 | Wireless               | N/A (intend to use ASUS AC53 USB when USB ports work)        |
 
